@@ -1,14 +1,19 @@
-import Component from './component.js'
+import React, { Component } from 'react';
+import Client from './Client.js';
+import Server from './Server.js';
+import Database from './Database.js';
+import './App.css';
 
 class App extends Component {
-  constructor(elementId, ...children) {
-    super(...children);
-    this.elementId = elementId;
-  };
-
-  dom() {
-    return document.getElementById(this.elementId);
-  };
-};
+  render() {
+    return (
+      <div className="App">
+        <Client />
+        <Server />
+        <Database />
+      </div>
+    );
+  }
+}
 
 export default App;
