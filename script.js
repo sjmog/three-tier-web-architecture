@@ -4,9 +4,7 @@ import Server from '/src/server.js';
 import Database from '/src/database.js';
 
 const app = new App('main',
-                  new Client(
-                    new Server()
-                  ),
+                  new Client(),
                   new Server(),
                   new Database()
                 );
